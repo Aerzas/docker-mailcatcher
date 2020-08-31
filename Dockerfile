@@ -1,4 +1,4 @@
-FROM ruby:2.6.6-alpine3.12
+FROM ruby:2.7.1-alpine3.12
 
 RUN set -ex; \
     # Install dependencies
@@ -7,7 +7,7 @@ RUN set -ex; \
     apk add --no-cache --virtual .build-deps build-base sqlite-dev; \
     # Install mailcatcher
     mkdir -p "${GEM_HOME}"; \
-    gem install mailcatcher --version 0.6.5; \
+    gem install mailcatcher --version 0.7.1; \
     # Cleanup
     gem sources --clear-all; \
     apk del .build-deps; \
