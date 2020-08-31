@@ -10,7 +10,7 @@ Docker Hub image: [https://hub.docker.com/r/aerzas/mailcatcher](https://hub.dock
 version: '3.5'
 services:
     php:
-        image: aerzas/mailcatcher:1.0.0
+        image: aerzas/mailcatcher:1.1.0
         ports:
             - '1025:1025'
             - '1080:1080'
