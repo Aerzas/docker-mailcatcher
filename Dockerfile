@@ -7,7 +7,7 @@ RUN set -ex; \
     apk add --no-cache --virtual .build-deps build-base sqlite-dev; \
     # Install mailcatcher
     mkdir -p "${GEM_HOME}"; \
-    gem install mailcatcher --version 0.9.0; \
+    gem install mailcatcher --version 0.10.0; \
     # Cleanup
     gem sources --clear-all; \
     apk del .build-deps; \
