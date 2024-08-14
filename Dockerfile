@@ -1,12 +1,12 @@
 FROM ruby:3.3.4-alpine3.20
 
 RUN set -ex; \
-    # Install dependencies
-    apk add --no-cache libstdc++ sqlite-libs; \
     # Install build dependencies
     apk add --no-cache --virtual .build-deps build-base sqlite-dev; \
-    # Install mailcatcher
+    # Install dependencies
     mkdir -p "${GEM_HOME}"; \
+    gem install sqlite3 --version 1.7.3 --platform=ruby; \
+    # Install mailcatcher
     gem install mailcatcher --version 0.10.0; \
     # Cleanup
     gem sources --clear-all; \
