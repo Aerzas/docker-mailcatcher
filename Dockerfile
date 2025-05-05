@@ -1,8 +1,10 @@
-FROM ruby:3.3.4-alpine3.20
+FROM ruby:3.4.3-alpine3.21
 
 RUN set -ex; \
     # Install build dependencies
     apk add --no-cache --virtual .build-deps build-base sqlite-dev; \
+    # Install runtime dependencies
+    apk add --no-cache libstdc++; \
     # Install dependencies
     mkdir -p "${GEM_HOME}"; \
     gem install sqlite3 --version 1.7.3 --platform=ruby; \
