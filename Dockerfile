@@ -1,4 +1,4 @@
-FROM ruby:3.4.3-alpine3.21
+FROM ruby:3.4.9-alpine3.23
 
 RUN set -ex; \
     # Install build dependencies
