@@ -7,7 +7,6 @@ Docker Hub image: [https://hub.docker.com/r/aerzas/mailcatcher](https://hub.dock
 ## Docker compose example
 
 ```yaml
-version: '3.5'
 services:
     php:
         image: aerzas/mailcatcher:latest
